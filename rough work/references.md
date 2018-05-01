@@ -6,3 +6,5 @@
 
 
 http://zevross.com/blog/2014/09/23/convert-google-directions-to-geojson-points-or-polylines/
+
+Google Maps API key: AIzaSyBuOXxPJIQca_M3jM_tKj7DvLY6UM0vcH0
