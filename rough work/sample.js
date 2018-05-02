@@ -1,4 +1,5 @@
 function populateData(month)
 {
-  alert("got to sample: "+month);
+  dataFile = "Chicago_"+month+".csv";
+  //alert("got to sample: "+dataFile);
 }
