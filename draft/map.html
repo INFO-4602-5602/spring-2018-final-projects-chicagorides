@@ -67,11 +67,13 @@
          * Chicago, IL 60625
          * (41.96872254686461, -87.68019238203728)"
          */
-
+         if(d.pickup_latitude!='')
+         {
         d.startPoint = [d.pickup_longitude, d.pickup_latitude];
         d.endPoint = [d.dropoff_longitude, d.dropoff_latitude];
         console.log(" The start point is"+d.startPoint+"and end point is "+d.endPoint);
         drawPathbtwPoints(d.startPoint, d.endPoint);
+      }
         // sleep(1000);
       });
 
@@ -127,10 +129,10 @@
 
       function drawPathbtwPoints(aa, chi) {
 
-        // g.append("path")
-        //   .attr("class", "arc")
-        //   .attr("d", link(aa, chi))
-        //   .call(transition);
+        g.append("path")
+          .attr("class", "arc")
+          .attr("d", link(aa, chi))
+          .call(transition);
 
 
         var pAA = projection(aa);
