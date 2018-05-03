@@ -23,8 +23,8 @@
     }
   </style>
   <script>
-    var width = 900,
-      height = 600;
+    var width = 1600,
+      height = 1600;
 
     var center = [-87.6847, 41.8550],
       scale = 65000;
@@ -45,32 +45,7 @@
     var projection = mapzoom.projection()
 
     d3.csv("../data/jan_min.csv", function(data) {
-      // data.forEach(function(d) {
-      //    /*
-      //     * "LOCATION" is of the form:
-      //     * "2019 W. Lawrence Avenue
-      //     * Chicago, IL 60625
-      //     * (41.96872254686461, -87.68019238203728)"
-      //     */
-      //
-      //    d.coord = d.LOCATION.split('\n')[2]
-      //      .match(/-?[\.\d]+/g)
-      //       .map(parseFloat)
-      //       .reverse();
-      // });
 
-      var circles = svg.append("g")
-        .selectAll("circle")
-        .data(data)
-        .enter().append("circle")
-        .attr("r", 5)
-        .attr("fill", "red")
-
-      circles
-        .append("title")
-        .text(function(d) {
-          return d["SITE NAME"] + '\n' + d["PHONE"]
-        })
 
       var clipPath = svg.append("defs")
         .append("clipPath").attr("id", "circle-clip")
@@ -83,8 +58,39 @@
       var g = svg.append("g")
         .attr("clip-path", "url(#circle-clip)");
 
-      var aa = [-87.6847, 41.8550];
-      var chi = [-87.732, 41.8338];
+
+
+      data.forEach(function(d) {
+        /*
+         * "LOCATION" is of the form:
+         * "2019 W. Lawrence Avenue
+         * Chicago, IL 60625
+         * (41.96872254686461, -87.68019238203728)"
+         */
+
+        d.startPoint = [d.pickup_longitude, d.pickup_latitude];
+        d.endPoint = [d.dropoff_longitude, d.dropoff_latitude];
+        console.log(" The start point is"+d.startPoint+"and end point is "+d.endPoint);
+        drawPathbtwPoints(d.startPoint, d.endPoint);
+        // sleep(1000);
+      });
+
+      // var circles = svg.append("g")
+      //   .selectAll("circle")
+      //   .data(data,function(d))
+      //   .enter().append("circle")
+      //   .attr("r", 5)
+      //   .attr("fill", "red")
+      //
+      // circles
+      //   .append("title")
+      //   .text(function(d) {
+      //     return d["SITE NAME"] + '\n' + d["PHONE"]
+      //   })
+
+
+      // var aa = [-87.6847, 41.8550];
+      // var chi = [-87.732, 41.8338];
 
       function link(p1, p2) {
         var start = projection(p1);
@@ -119,32 +125,44 @@
         };
       }
 
-      g.append("path")
-                   .attr("class", "arc")
-                   .attr("d", link(aa, chi))
-                   .call(transition);
+      function drawPathbtwPoints(aa, chi) {
+
+        // g.append("path")
+        //   .attr("class", "arc")
+        //   .attr("d", link(aa, chi))
+        //   .call(transition);
 
 
-      var pAA = projection(aa);
-      var circle = g.append("circle")
-        .attr("width", 0)
-        .attr("height", 0)
-        .attr("fill", "blue")
-        .attr("cx", pAA[0])
-        .attr("cy", pAA[1])
-        .attr("r", 2);
-      circle.transition()
-        .duration(1000)
-        .attrTween("cx", translateAlong(d3.select("path.arc").node(), "x"))
-        .attrTween("cy", translateAlong(d3.select("path.arc").node(), "y"));
+        var pAA = projection(aa);
+        var circle = g.append("circle")
+          .attr("width", 2)
+          .attr("height", 2)
+          .attr("fill", "blue")
+          .attr("cx", pAA[0])
+          .attr("cy", pAA[1])
+          .attr("r", 2.5);
 
-      mapzoom.addLayer(function() {
-        circles
-          .attr("transform", function(d) {
-            return "translate(" + projection(d.coord) + ")"
+        var pAB = projection(chi);
+        var circle = g.append("circle")
+          .attr("width", 2)
+          .attr("height", 2)
+          .attr("fill", "red")
+          .attr("cx", pAB[0])
+          .attr("cy", pAB[1])
+          .attr("r", 2.5);
+
+        // circle.transition()
+        //   .duration(10000)
+        //   .attrTween("cx", translateAlong(d3.select("path.arc").node(), "x"))
+        //   .attrTween("cy", translateAlong(d3.select("path.arc").node(), "y"));
+
+        mapzoom.addLayer(function() {
+          circle.attr("transform", function(d) {
+            return "translate(" + projection(aa) + ")"
           })
-      });
+        });
 
+      }
 
     });
 
