@@ -1,0 +1,147 @@
+bowling_team,batting_team,total_runs
+Chennai Super Kings,Deccan Chargers,70
+Chennai Super Kings,Delhi Daredevils,85
+Chennai Super Kings,Kings XI Punjab,97
+Chennai Super Kings,Kochi Tuskers Kerala,12
+Chennai Super Kings,Kolkata Knight Riders,105
+Chennai Super Kings,Mumbai Indians,142
+Chennai Super Kings,Pune Warriors,38
+Chennai Super Kings,Rajasthan Royals,99
+Chennai Super Kings,Royal Challengers Bangalore,123
+Chennai Super Kings,Sunrisers Hyderabad,35
+Deccan Chargers,Chennai Super Kings,76
+Deccan Chargers,Delhi Daredevils,74
+Deccan Chargers,Kings XI Punjab,68
+Deccan Chargers,Kochi Tuskers Kerala,6
+Deccan Chargers,Kolkata Knight Riders,78
+Deccan Chargers,Mumbai Indians,88
+Deccan Chargers,Pune Warriors,21
+Deccan Chargers,Rajasthan Royals,51
+Deccan Chargers,Royal Challengers Bangalore,65
+Delhi Daredevils,Chennai Super Kings,99
+Delhi Daredevils,Deccan Chargers,57
+Delhi Daredevils,Gujarat Lions,22
+Delhi Daredevils,Kings XI Punjab,124
+Delhi Daredevils,Kochi Tuskers Kerala,18
+Delhi Daredevils,Kolkata Knight Riders,135
+Delhi Daredevils,Mumbai Indians,167
+Delhi Daredevils,Pune Warriors,35
+Delhi Daredevils,Rajasthan Royals,105
+Delhi Daredevils,Rising Pune Supergiant,12
+Delhi Daredevils,Rising Pune Supergiants,14
+Delhi Daredevils,Royal Challengers Bangalore,103
+Delhi Daredevils,Sunrisers Hyderabad,44
+Gujarat Lions,Delhi Daredevils,20
+Gujarat Lions,Kings XI Punjab,19
+Gujarat Lions,Kolkata Knight Riders,23
+Gujarat Lions,Mumbai Indians,29
+Gujarat Lions,Rising Pune Supergiant,12
+Gujarat Lions,Rising Pune Supergiants,8
+Gujarat Lions,Royal Challengers Bangalore,29
+Gujarat Lions,Sunrisers Hyderabad,20
+Kings XI Punjab,Chennai Super Kings,113
+Kings XI Punjab,Deccan Chargers,53
+Kings XI Punjab,Delhi Daredevils,137
+Kings XI Punjab,Gujarat Lions,22
+Kings XI Punjab,Kochi Tuskers Kerala,11
+Kings XI Punjab,Kolkata Knight Riders,127
+Kings XI Punjab,Mumbai Indians,136
+Kings XI Punjab,Pune Warriors,42
+Kings XI Punjab,Rajasthan Royals,112
+Kings XI Punjab,Rising Pune Supergiant,7
+Kings XI Punjab,Rising Pune Supergiants,16
+Kings XI Punjab,Royal Challengers Bangalore,123
+Kings XI Punjab,Sunrisers Hyderabad,57
+Kochi Tuskers Kerala,Chennai Super Kings,7
+Kochi Tuskers Kerala,Deccan Chargers,7
+Kochi Tuskers Kerala,Delhi Daredevils,17
+Kochi Tuskers Kerala,Kings XI Punjab,7
+Kochi Tuskers Kerala,Kolkata Knight Riders,7
+Kochi Tuskers Kerala,Mumbai Indians,14
+Kochi Tuskers Kerala,Pune Warriors,11
+Kochi Tuskers Kerala,Rajasthan Royals,5
+Kochi Tuskers Kerala,Royal Challengers Bangalore,15
+Kolkata Knight Riders,Chennai Super Kings,97
+Kolkata Knight Riders,Deccan Chargers,64
+Kolkata Knight Riders,Delhi Daredevils,106
+Kolkata Knight Riders,Gujarat Lions,18
+Kolkata Knight Riders,Kings XI Punjab,143
+Kolkata Knight Riders,Kochi Tuskers Kerala,14
+Kolkata Knight Riders,Mumbai Indians,130
+Kolkata Knight Riders,Pune Warriors,25
+Kolkata Knight Riders,Rajasthan Royals,101
+Kolkata Knight Riders,Rising Pune Supergiant,11
+Kolkata Knight Riders,Rising Pune Supergiants,8
+Kolkata Knight Riders,Royal Challengers Bangalore,119
+Kolkata Knight Riders,Sunrisers Hyderabad,84
+Mumbai Indians,Chennai Super Kings,175
+Mumbai Indians,Deccan Chargers,67
+Mumbai Indians,Delhi Daredevils,113
+Mumbai Indians,Gujarat Lions,35
+Mumbai Indians,Kings XI Punjab,158
+Mumbai Indians,Kochi Tuskers Kerala,10
+Mumbai Indians,Kolkata Knight Riders,139
+Mumbai Indians,Pune Warriors,33
+Mumbai Indians,Rajasthan Royals,108
+Mumbai Indians,Rising Pune Supergiant,21
+Mumbai Indians,Rising Pune Supergiants,13
+Mumbai Indians,Royal Challengers Bangalore,159
+Mumbai Indians,Sunrisers Hyderabad,61
+Pune Warriors,Chennai Super Kings,24
+Pune Warriors,Deccan Chargers,20
+Pune Warriors,Delhi Daredevils,38
+Pune Warriors,Kings XI Punjab,24
+Pune Warriors,Kochi Tuskers Kerala,6
+Pune Warriors,Kolkata Knight Riders,33
+Pune Warriors,Mumbai Indians,33
+Pune Warriors,Rajasthan Royals,18
+Pune Warriors,Royal Challengers Bangalore,31
+Pune Warriors,Sunrisers Hyderabad,8
+Rajasthan Royals,Chennai Super Kings,102
+Rajasthan Royals,Deccan Chargers,57
+Rajasthan Royals,Delhi Daredevils,120
+Rajasthan Royals,Kings XI Punjab,123
+Rajasthan Royals,Kochi Tuskers Kerala,12
+Rajasthan Royals,Kolkata Knight Riders,128
+Rajasthan Royals,Mumbai Indians,133
+Rajasthan Royals,Pune Warriors,31
+Rajasthan Royals,Royal Challengers Bangalore,100
+Rajasthan Royals,Sunrisers Hyderabad,60
+Rising Pune Supergiant,Delhi Daredevils,15
+Rising Pune Supergiant,Gujarat Lions,12
+Rising Pune Supergiant,Kings XI Punjab,12
+Rising Pune Supergiant,Kolkata Knight Riders,11
+Rising Pune Supergiant,Mumbai Indians,29
+Rising Pune Supergiant,Royal Challengers Bangalore,11
+Rising Pune Supergiant,Sunrisers Hyderabad,10
+Rising Pune Supergiants,Delhi Daredevils,10
+Rising Pune Supergiants,Gujarat Lions,18
+Rising Pune Supergiants,Kings XI Punjab,6
+Rising Pune Supergiants,Kolkata Knight Riders,13
+Rising Pune Supergiants,Mumbai Indians,12
+Rising Pune Supergiants,Royal Challengers Bangalore,14
+Rising Pune Supergiants,Sunrisers Hyderabad,9
+Royal Challengers Bangalore,Chennai Super Kings,111
+Royal Challengers Bangalore,Deccan Chargers,76
+Royal Challengers Bangalore,Delhi Daredevils,117
+Royal Challengers Bangalore,Gujarat Lions,46
+Royal Challengers Bangalore,Kings XI Punjab,151
+Royal Challengers Bangalore,Kochi Tuskers Kerala,16
+Royal Challengers Bangalore,Kolkata Knight Riders,128
+Royal Challengers Bangalore,Mumbai Indians,159
+Royal Challengers Bangalore,Pune Warriors,30
+Royal Challengers Bangalore,Rajasthan Royals,79
+Royal Challengers Bangalore,Rising Pune Supergiant,13
+Royal Challengers Bangalore,Rising Pune Supergiants,14
+Royal Challengers Bangalore,Sunrisers Hyderabad,75
+Sunrisers Hyderabad,Chennai Super Kings,41
+Sunrisers Hyderabad,Delhi Daredevils,57
+Sunrisers Hyderabad,Gujarat Lions,24
+Sunrisers Hyderabad,Kings XI Punjab,55
+Sunrisers Hyderabad,Kolkata Knight Riders,55
+Sunrisers Hyderabad,Mumbai Indians,66
+Sunrisers Hyderabad,Pune Warriors,2
+Sunrisers Hyderabad,Rajasthan Royals,33
+Sunrisers Hyderabad,Rising Pune Supergiant,10
+Sunrisers Hyderabad,Rising Pune Supergiants,12
+Sunrisers Hyderabad,Royal Challengers Bangalore,57
