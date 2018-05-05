@@ -9,7 +9,7 @@
 <body>
   <script src="//d3js.org/d3.v4.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-  <link rel="stylesheet" src="style.css" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
   <div id="donut">
 
   </div>
@@ -229,7 +229,7 @@
           // .append("svg:title") //mouseover title showing the figures
           //  .text(function(d) {return d.data.race + ": " + d.data.measure;})
           .on("mouseover", function(d) {
-            return tooltip.html(d.data.run_type + " : " + formatAsPercentage((d.data.runs).toFixed(3)))
+            return tooltip.html(d.data.wic_type + " : " + formatAsPercentage((d.data.runs).toFixed(3)))
               .style("visibility", "visible")
               .style("top", (event.pageY - 17) + "px").style("left", (event.pageX + 25) + "px");
           })

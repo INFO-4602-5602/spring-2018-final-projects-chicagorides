@@ -32,7 +32,7 @@ path {
   padding: 15px !important;
   background: #36384C !important;
   color: white !important;
-  /* font-family: Monospace, Serif; */
+  font-family: Monospace, Serif; 
 }
 
 .tooltip1:after {
