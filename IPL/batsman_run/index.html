@@ -9,18 +9,17 @@
 <body>
   <script src="//d3js.org/d3.v4.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-  <link rel="stylesheet" src="style.css" />
-  <div id="donut">
-
-  </div>
-  <div id="legend" class="legendSpace">
-  </div>
+  <link rel="stylesheet" href="style.css" />
+	<div id="bat-bar" class="side1"></div>
+  <div id="bat-donut" class="side2"></div>
+  <div id="bat-legend" class="side3"></div>
   <script>
-
     var tooltip = d3.select("body").append("div")
       .attr("class", "tooltip1")
       .style("visibility", "hidden");
+
       var formatAsPercentage = d3.format(".2%");
+
     d3.csv('../../NEWDATA/batsmanruns.csv', function(error, data) {
       console.log(data);
 
@@ -29,7 +28,7 @@
           top: 20,
           right: 20,
           bottom: 30,
-          left: 40
+          left: 80
         },
         width = 960 - margin.left - margin.right,
         height = 500 - margin.top - margin.bottom;
@@ -45,7 +44,7 @@
       // append the svg object to the body of the page
       // append a 'group' element to 'svg'
       // moves the 'group' element to the top left margin
-      var svg = d3.select("body").append("svg")
+      var bar_bat = d3.select("#bat-bar").append("svg")
         .attr("width", width + margin.left + margin.right)
         .attr("height", height + margin.top + margin.bottom)
         .append("g")
@@ -65,7 +64,7 @@
         return d.player;
       }));
 
-      svg.selectAll(".bar")
+      bar_bat.selectAll(".bar")
         .data(data)
         .enter().append("rect")
         .attr("class", "bar")
@@ -89,37 +88,35 @@
       function display(d) {
         console.log(d);
         var data_run = [{
-            "run_type": "0",
+            "run_type": "0 runs",
             "runs": +d[0] / d[-1]
           },
           {
-            "run_type": "1",
+            "run_type": "1 runs",
             "runs": +d[1] / d[-1]
           },
           {
-            "run_type": "2",
+            "run_type": "2 runs",
             "runs": +d[2] / d[-1]
           },
           {
-            "run_type": "3",
+            "run_type": "3 runs",
             "runs": +d[3] / d[-1]
           },
           {
-            "run_type": "4",
+            "run_type": "4 runs",
             "runs": +d[4] / d[-1]
           },
           {
-            "run_type": "6",
+            "run_type": "6 runs",
             "runs": +d[6] / d[-1]
           }
         ];
         // console.log(data_run[0]["runs"]);
         // d3.select("#donut").datum(data_run).call(donut);
-        $("#donut").empty();
+        $("#bat-donut").empty();
         dsDonutChart(data_run,d.player);
       }
-
-
 
       function dsDonutChart(donutChartData,player) {
 
@@ -136,7 +133,7 @@
             .range(["#FFA8A8","#99E0FF","#D7D1F8","#FF97CB","#A8CFFF","#f0e68c","#f0e68c"]);
           ;
 
-        var vis = d3.select("#donut")
+        var donut_bat = d3.select("#bat-donut")
           .append("svg:svg")
           .data(donutChartData)
           .attr("width", width)
@@ -145,22 +142,22 @@
           .attr("transform", "translate(" + outerRadius + "," + outerRadius + ")")
         ;
 
-        $("#legend").empty();
-        var legend_svg = d3.select("#legend")
+        $("#bat-legend").empty();
+        var legend_svg1 = d3.select("#bat-legend")
           .append("svg")
           .attr("width", width)
           .attr("height", height)
           .append("g")
           .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-        var legend = legend_svg.selectAll(".runtype")
+        var legend1 = legend_svg1.selectAll(".runtype")
           .data(donutChartData)
           .enter().append("g")
           .attr("class", "runtype");
         console.log("here");
         var legendSpace = 200 / 7;
 
-        legend.append("rect")
+        legend1.append("rect")
           .attr("width", 20)
           .attr("height", 20)
           .attr("x", 10)
@@ -174,7 +171,7 @@
           })
           .attr("class", "legend-box");
 
-        legend.append("text")
+        legend1.append("text")
           .attr("x", 35)
           .attr("y", function(d, i) {
             return (legendSpace) + i * (legendSpace) + 6;
@@ -196,7 +193,7 @@
             return d.runs;
           });
 
-        var arcs = vis.selectAll("g.slice")
+        var arcs = donut_bat.selectAll("g.slice")
           .data(pie(donutChartData))
           .enter()
           .append("svg:g")
@@ -247,15 +244,15 @@
         }
 
         // Pie chart title
-        vis.append("svg:text")
+        donut_bat.append("svg:text")
           .attr("dy", ".35em")
           .attr("text-anchor", "middle")
           .attr("font-weight", "bold")
           .style("font-size", "16px")
-          .text(Player)
+          .text(player)
           .attr("class", "title");
 
-        vis.append("svg:text")
+        donut_bat.append("svg:text")
           .attr("dy", "1.75em")
           .attr("text-anchor", "middle")
           .attr("font-weight", "bold")
@@ -277,12 +274,12 @@
       }
 
       // add the x Axis
-      svg.append("g")
+      bar_bat.append("g")
         .attr("transform", "translate(0," + height + ")")
         .call(d3.axisBottom(x));
 
       // add the y Axis
-      svg.append("g")
+      bar_bat.append("g")
         .call(d3.axisLeft(y));
     });
   </script>

@@ -32,7 +32,7 @@ path {
   padding: 15px !important;
   background: #36384C !important;
   color: white !important;
-  font-family: Monospace, Serif; 
+  font-family: Monospace, Serif;
 }
 
 .tooltip1:after {
@@ -54,4 +54,22 @@ path {
 
 circle {
   fill: #ff6600;
+}
+
+
+.side1{
+		width: 64%;
+		float: left;
+}
+
+.side2{
+		margin-top:25px;
+		width: 23%;
+		float: left;
+}
+
+.side3{
+	margin-top:65px;
+	width:13%;
+	float:left;
 }
