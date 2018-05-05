@@ -64,21 +64,11 @@
       y.domain(data.map(function(d) {
         return d.player;
       }));
-      //y.domain([0, d3.max(data, function(d) { return d.sales; })]);
-      // var donut = donutChart()
-      //   .width(960)
-      //   .height(500)
-      //   .transTime(750) // length of transitions in ms
-      //   .cornerRadius(3) // sets how rounded the corners are on each slice
-      //   .padAngle(0.015) // effectively dictates the gap between slices
-      //   .variable('runs')
-      //   .category('run_type');
-      // append the rectangles for the bar chart
+
       svg.selectAll(".bar")
         .data(data)
         .enter().append("rect")
         .attr("class", "bar")
-        //.attr("x", function(d) { return x(d.sales); })
         .attr("width", function(d) {
           return x(d.runs);
         })
@@ -123,12 +113,9 @@
             "runs": +d[6] / d[-1]
           }
         ];
-        // console.log(data_run[0]["runs"]);
-        // d3.select("#donut").datum(data_run).call(donut);
+				$("#donut").empty();
         dsDonutChart(data_run);
       }
-
-
 
       function dsDonutChart(donutChartData) {
 
@@ -140,35 +127,24 @@
           innerRadiusFinal = outerRadius * .5,
           innerRadiusFinal3 = outerRadius * .45,
 
-          // color = d3.scaleOrdinal().range(["#48A36D",  "#56AE7C",  "#64B98C", "#72C39B", "#80CEAA", "#80CCB3", "#7FC9BD", "#7FC7C6", "#7EC4CF", "#7FBBCF", "#7FB1CF", "#80A8CE", "#809ECE", "#8897CE", "#8F90CD", "#9788CD", "#9E81CC", "#AA81C5", "#B681BE", "#C280B7", "#CE80B0", "#D3779F", "#D76D8F", "#DC647E", "#E05A6D", "#E16167", "#E26962", "#E2705C", "#E37756", "#E38457", "#E39158", "#E29D58", "#E2AA59", "#E0B15B", "#DFB95C", "#DDC05E", "#DBC75F", "#E3CF6D", "#EAD67C", "#F2DE8A"]);
           color = d3.scaleOrdinal()
             .domain(["0","1","2","3","4","5","6"])
-            .range(["red","green","yellow","pink","blue","#581845","#581845"]);
-          ; //builtin range of colors
-
-        // color = d3.scaleOrdinal().range(["#07E712","#FF5733","#E72E07","#581845","#24EECD","#0FF09A","#F00FF0","#9D919D","#5141F0","#41A0F0", "#13EF10","#EFB210","#EF8A10","#EF10AB","#0C856A","#34660A","#0A4666","#E2ABB5","#E70964","#967FA9","#9BA97F"]);
-
-
-        // var donutChartData = chosenDonutData(school_year, genderType);
-
-
-
-
+            .range(["#FFA8A8","#99E0FF","#D7D1F8","#FF97CB","#A8CFFF","#f0e68c","#f0e68c"]);
+          ;
 
         var vis = d3.select("#donut")
-          .append("svg:svg") //create the SVG element inside the <body>
-          .data(donutChartData) //associate our data with the document
-          .attr("width", width) //set the width and height of our visualization (these will be attributes of the <svg> tag
+          .append("svg:svg")
+          .data(donutChartData)
+          .attr("width", width)
           .attr("height", height)
-          .append("svg:g") //make a group to hold our pie chart
-          .attr("transform", "translate(" + outerRadius + "," + outerRadius + ")") //move the center of the pie chart from 0, 0 to radius, radius
+          .append("svg:g")
+          .attr("transform", "translate(" + outerRadius + "," + outerRadius + ")")
         ;
 
         $("#legend").empty();
         var legend_svg = d3.select("#legend")
-          .append("svg") //create the SVG element inside the <body>
-          //associate our data with the document
-          .attr("width", width) //set the width and height of our visualization (these will be attributes of the <svg> tag
+          .append("svg")
+          .attr("width", width)
           .attr("height", height)
           .append("g")
           .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
@@ -178,7 +154,7 @@
           .enter().append("g")
           .attr("class", "runtype");
         console.log("here");
-        var legendSpace = 200 / 5;
+        var legendSpace = 200 / 7;
 
         legend.append("rect")
           .attr("width", 20)
@@ -190,7 +166,7 @@
           .attr("fill", function(d, i) {
             select_color = color(d.run_type);
             console.log("Color is "+select_color);
-            return color(d.run_type); // If array key "visible" = true then color rect, if not then make it grey
+            return color(d.run_type);
           })
           .attr("class", "legend-box");
 
@@ -198,30 +174,29 @@
           .attr("x", 35)
           .attr("y", function(d, i) {
             return (legendSpace) + i * (legendSpace) + 6;
-          }) // (return (11.25/2 =) 5.625) + i * (5.625)
+          })
           .text(function(d, i) {
             console.log(d.run_type);
             return d.run_type;
           });
 
-
-        var arc = d3.arc() //this will create <path> elements for us using arc data
+        var arc = d3.arc()
           .outerRadius(outerRadius).innerRadius(innerRadius);
 
         // for animation
         var arcFinal = d3.arc().innerRadius(innerRadiusFinal).outerRadius(outerRadius);
         var arcFinal3 = d3.arc().innerRadius(innerRadiusFinal3).outerRadius(outerRadius);
 
-        var pie = d3.pie() //this will create arc data for us given a list of values
+        var pie = d3.pie()
           .value(function(d) {
             return d.runs;
-          }); //we must tell it out to access the value of each element in our data array
+          });
 
-        var arcs = vis.selectAll("g.slice") //this selects all <g> elements with class slice (there aren't any yet)
-          .data(pie(donutChartData)) //associate the generated pie data (an array of arcs, each having startAngle, endAngle and value properties)
-          .enter() //this will create <g> elements for every "extra" data element that should be associated with a selection. The result is creating a <g> for every object in the data array
-          .append("svg:g") //create a group to hold each slice (we will have a <path> and a <text> element associated with each slice)
-          .attr("class", "slice") //allow us to style things in the slices (like text)
+        var arcs = vis.selectAll("g.slice")
+          .data(pie(donutChartData))
+          .enter()
+          .append("svg:g")
+          .attr("class", "slice")
           .on("mouseover", mouseover)
           .on("mouseout", mouseout)
         // .on("click", up)
@@ -230,10 +205,8 @@
         arcs.append("svg:path")
           .attr("fill", function(d, i) {
             return color(i);
-          }) //set the color for each slice to be chosen from the color function defined above
-          .attr("d", arc) //this creates the actual SVG path using the associated data (pie) with the arc drawing function
-          // .append("svg:title") //mouseover title showing the figures
-          //  .text(function(d) {return d.data.race + ": " + d.data.measure;})
+          })
+          .attr("d", arc)
           .on("mouseover", function(d) {
             return tooltip.html(d.data.run_type + " : " + formatAsPercentage((d.data.runs).toFixed(3)))
               .style("visibility", "visible")
@@ -297,12 +270,7 @@
             .duration(400)
             .attr("d", arcFinal);
         }
-
-
-
       }
-
-
 
       // add the x Axis
       svg.append("g")
