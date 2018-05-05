@@ -23,3 +23,35 @@ path {
     font-size: 0.8em;
     font-style: italic;
 }
+
+
+.tooltip1 {
+  position: absolute !important;
+  height: auto !important;
+  width: auto !important;
+  padding: 15px !important;
+  background: #36384C !important;
+  color: white !important;
+  /* font-family: Monospace, Serif; */
+}
+
+.tooltip1:after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  /* To the left of the tooltip */
+  margin-top: -10px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent #36384C transparent transparent;
+}
+
+
+.plot-bg {
+  fill: white;
+}
+
+circle {
+  fill: #ff6600;
+}
