@@ -125,12 +125,13 @@
         ];
         // console.log(data_run[0]["runs"]);
         // d3.select("#donut").datum(data_run).call(donut);
-        dsDonutChart(data_run);
+        $("#donut").empty();
+        dsDonutChart(data_run,d.player);
       }
 
 
 
-      function dsDonutChart(donutChartData) {
+      function dsDonutChart(donutChartData,player) {
 
         var width = 400,
           height = 400,
@@ -177,7 +178,7 @@
           .data(donutChartData)
           .enter().append("g")
           .attr("class", "runtype");
-        console.log("here");
+
         var legendSpace = 200 / 5;
 
         legend.append("rect")
@@ -275,7 +276,7 @@
           .attr("text-anchor", "middle")
           .attr("font-weight", "bold")
           .style("font-size", "16px")
-          .text("Demographic Enrollment")
+          .text(Player)
           .attr("class", "title");
 
         vis.append("svg:text")
@@ -283,7 +284,7 @@
           .attr("text-anchor", "middle")
           .attr("font-weight", "bold")
           .style("font-size", "16px")
-          .text("run_type")
+          .text("run distribution")
           .attr("class", "title");
 
         function mouseover() {

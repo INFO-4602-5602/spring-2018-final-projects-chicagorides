@@ -117,12 +117,13 @@
         ];
         // console.log(data_run[0]["runs"]);
         // d3.select("#donut").datum(data_run).call(donut);
-        dsDonutChart(data_run);
+        $("#donut").empty();
+        dsDonutChart(data_run,d.bowler,d.total);
       }
 
 
 
-      function dsDonutChart(donutChartData) {
+      function dsDonutChart(donutChartData,player,total) {
 
         var width = 400,
           height = 400,
@@ -147,6 +148,7 @@
 
 
 
+        console.log("Player is "+ player);
         var vis = d3.select("#donut")
           .append("svg:svg") //create the SVG element inside the <body>
           .data(donutChartData) //associate our data with the document
@@ -267,7 +269,7 @@
           .attr("text-anchor", "middle")
           .attr("font-weight", "bold")
           .style("font-size", "16px")
-          .text("Demographic Enrollment")
+          .text(player)
           .attr("class", "title");
 
         vis.append("svg:text")
@@ -275,7 +277,7 @@
           .attr("text-anchor", "middle")
           .attr("font-weight", "bold")
           .style("font-size", "16px")
-          .text("run_type")
+          .text(total+" wickets")
           .attr("class", "title");
 
         function mouseover() {
