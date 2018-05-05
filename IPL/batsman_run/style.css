@@ -57,7 +57,7 @@ circle {
 }
 
 .side1{
-		width: 65%;
+		width: 60%;
 		float: left;
 }
 
@@ -69,6 +69,6 @@ circle {
 
 .side3{
 	margin-top:65px;
-	width:10%;
+	width:15%;
 	float:left;
 }
