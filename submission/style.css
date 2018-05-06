@@ -54,56 +54,66 @@ polyline{
   fill: white;
 }
 
+.chord-teams{
+	width:70%;
+	float:left;
+}
+
+.chord-teams-text{
+	margin-top:50px;
+	width:30%;
+	float:left;
+}
 .bat-side1{
-		width: 60%;
+		width: 70%;
 		float: left;
 }
 
 .bat-text-side1{
-		width: 40%;
+		width: 30%;
 		float: left;
 }
 
 .bat-text-side2{
-		width: 64%;
+		width: 55%;
 		float: left;
 }
 .bat-side2{
 		margin-top:25px;
-		width: 22%;
+		width: 25%;
 		float: left;
 }
 
 .bat-side3{
 	margin-top:65px;
-	width:14%;
+	width:20%;
 	float:left;
 }
 
 .bowl-side1{
-		width: 60%;
+		width: 70%;
 		float: left;
 }
 
 .bowl-text-side1{
-		width: 40%;
+		width: 30%;
 		float: left;
 }
 
 .bowl-text-side2{
-		width: 64%;
+		width: 55%;
 		float: left;
 }
 
 .bowl-side2{
 		margin-top:25px;
-		width: 22%;
+		width: 25%;
 		float: left;
 }
 
 .bowl-side3{
 	margin-top:95px;
-	width:14%;
+	width:20%;
 	float:left;
 }
 
@@ -124,8 +134,16 @@ polyline{
   pointer-events: all;
 }
 
+.cells title {
+	position: absolute !important;
+	height: auto !important;
+	width: auto !important;
+	padding: 15px !important;
+	background: #36384C !important;
+	color: white !important;
+}
 #viz1{
-  height: 900px;
+  height: 720px;
 }
 #viz2{
   height: 1400px;

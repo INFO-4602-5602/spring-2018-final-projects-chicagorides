@@ -1,3 +1,7 @@
+var tooltip = d3.select("body").append("div")
+	.attr("class", "tooltip1")
+	.style("visibility", "hidden");
+
 var margin3 = {top: 50, right: 20, bottom: 100, left:50};
 var width3 = 1100 - margin3.left - margin3.right;
 var height3 = 300 - margin3.top - margin3.bottom;
@@ -56,13 +60,21 @@ d3.csv("data/perteam4s.csv", type4, function(error, data) {
       .attr("fill", function(d)
       {
         return colors_fetch(d.data.batting_team);
-      });
+      })
+			// .on("mouseover", function(d) {
+			// 	 return tooltip.html("Batting Team: "+d.data.batting_team+ "\n" + "Number of fours: "+d.data.fours+ "\n" + "Over: "+d.data.over)
+	  	// 		 .style("visibility", "visible")
+	  	// 		 .style("top", (event.pageY - 17) + "px").style("left", (event.pageX + 25) + "px");
+		 // })
+		 // .on("mouseout", function(d) {
+			// return tooltip.style("visibility", "hidden");
+		 // });
 
   cell.append("path")
       .attr("d", function(d) { return "M" + d.join("L") + "Z"; });
 
   cell.append("title")
-      .text(function(d) { return formatValue(d.data.fours) + "\n" + formatValue(d.data.over); });
+      .text(function(d) { return "Batting Team: "+d.data.batting_team+ "\n" + "Number of Fours: "+formatValue(d.data.fours) + "\n" + "Over: "+formatValue(d.data.over); });
 });
 
 var svg6s = d3.select("#sixesperover").append("svg")
@@ -117,7 +129,7 @@ d3.csv("data/perteam6s.csv", type6, function(error, data) {
       .attr("d", function(d) { return "M" + d.join("L") + "Z"; });
 
   cell.append("title")
-      .text(function(d) { return formatValue(d.data.sixes) + "\n" + formatValue(d.data.over); });
+      .text(function(d) { return "Batting Team: "+d.data.batting_team+ "\n" + "Number of Sixes: "+formatValue(d.data.sixes) + "\n" + "Over: "+formatValue(d.data.over); });
 });
 
 
@@ -194,13 +206,13 @@ var data_team = [{
   }
 ];
 widthl = 280;
-heightl = 500;
+heightl = 600;
 var legend_svg3 = d3.select("#scores-legend")
   .append("svg")
   .attr("width", widthl)
   .attr("height", heightl)
   .append("g")
-  .attr("transform", "translate(" + margin3.left + "," + 100 + ")");
+  .attr("transform", "translate(" + margin3.left + "," + 130 + ")");
 
 var legend3 = legend_svg3.selectAll(".team")
   .data(data_team)

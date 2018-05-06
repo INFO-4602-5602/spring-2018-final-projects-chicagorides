@@ -12,7 +12,7 @@ d3.csv('data/batsmanruns.csv', function(error, data) {
 			top: 20,
 			right: 20,
 			bottom: 30,
-			left: 80
+			left: 110
 		},
 		width = 960 - margin.left - margin.right,
 		height = 500 - margin.top - margin.bottom;
@@ -105,7 +105,7 @@ d3.csv('data/batsmanruns.csv', function(error, data) {
 		$("#bat-donut").empty();
 		dsDonutChart(data_run,d.player,d.runs);
 	}
-
+display(data[0]);
 	function dsDonutChart(donutChartData,player,totalRuns) {
 
 		var width = 400,

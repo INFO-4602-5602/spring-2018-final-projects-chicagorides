@@ -1,11 +1,6 @@
 <html>
 <head>
 <meta charset="utf-8">
-<style>
-  .bar {
-    fill: steelblue;
-  }
-</style>
 </head>
 <body>
   <script src="//d3js.org/d3.v4.min.js"></script>
@@ -13,7 +8,9 @@
 	<script src="http://vizjs.org/viz.v1.3.0.min.js"></script>
   <link rel="stylesheet" href="style.css" />
 	<div id="viz1">
-		<div id="chord"></div>
+		<div id="chord" class="chord-teams"></div>
+		<div id="chord-text" class="chord-teams-text">
+		<h2>IPL team matches</h2></div>
 		<script src="chord.js"></script>
 	</div>
   <div id="viz2">
@@ -21,7 +18,9 @@
       <div id = "scores-legend"></div>
     </div>
     <div style="display:inline">
+			<div style="margin-left:630px;"><h3>Distribution of 4s by all teams across overs</h3></div>
       <div id = "foursperover"></div>
+			<div style="margin-left:630px;"><h3>Distribution of 6s by all teams across overs</h3></div>
       <div id = "sixesperover"></div>
     </div>
 	<div id="viz3">

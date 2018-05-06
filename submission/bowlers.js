@@ -1,9 +1,9 @@
 var tooltip = d3.select("body").append("div")
-	.attr("class", "tooltip1")
+	// .attr("class", "tooltip1")
 	.style("visibility", "hidden");
 
 	var formatAsPercentage = d3.format(".2%");
-
+var data_run = [];
 d3.csv('data/bowlers.csv', function(error, data) {
 	console.log(data);
 
@@ -12,7 +12,7 @@ d3.csv('data/bowlers.csv', function(error, data) {
 			top: 20,
 			right: 20,
 			bottom: 30,
-			left: 80
+			left: 110
 		},
 		width = 960 - margin.left - margin.right,
 		height = 500 - margin.top - margin.bottom;
@@ -74,7 +74,7 @@ d3.csv('data/bowlers.csv', function(error, data) {
 
 	function display(d) {
 		console.log(d);
-		var data_run = [{
+		data_run = [{
 				"wic_type": "bowled",
 				"runs": +d["bowled"] / d["total"]
 			},
@@ -96,8 +96,7 @@ d3.csv('data/bowlers.csv', function(error, data) {
 		$("#bowl-donut").empty();
 		dsDonutChart(data_run,d.bowler,d.total);
 	}
-
-
+display(data[0]);
 
 	function dsDonutChart(donutChartData,player,total) {
 

@@ -1,6 +1,6 @@
 var margin = {top: 20, right: 20, bottom: 30, left: 50};
 var width = 1500 - margin.left - margin.right;
-var height = 800 - margin.top - margin.bottom;
+var height = 700 - margin.top - margin.bottom;
 
 var team_data = [];
 
@@ -24,7 +24,7 @@ var svg = d3.select("#chord").append("svg")
 	.attr("width", width + margin.left + margin.right)
 	.attr("height", height + margin.top + margin.bottom)
 	.append("g")
-	.attr("transform", "translate("+600 + "," + 450 +")");
+	.attr("transform", "translate("+480 + "," + 350 +")");
 
 d3.csv("data/teams.csv",  function(error,data){
 	if (error) throw error;
@@ -35,8 +35,8 @@ d3.csv("data/teams.csv",  function(error,data){
 var chord = viz.chord()
 	.data(team_data)
 	.chordOpacity(0.5)
-	.outerRadius(330)
-	.innerRadius(315)
+	.outerRadius(280)
+	.innerRadius(265)
 	.fill(function(d){ return team_colors[d]})
 
 d3.select("g").call(chord);
