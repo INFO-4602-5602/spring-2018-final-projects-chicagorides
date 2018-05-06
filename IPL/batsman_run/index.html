@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
-<style>
-  .bar {
-    fill: steelblue;
-  }
-</style>
+
 
 <body>
   <script src="//d3js.org/d3.v4.min.js"></script>
@@ -64,26 +60,30 @@
         return d.player;
       }));
 
-      bar_bat.selectAll(".bar")
-        .data(data)
-        .enter().append("rect")
-        .attr("class", "bar")
-        .attr("width", function(d) {
-          return x(d.runs);
-        })
-        .attr("y", function(d) {
-          return y(d.player);
-        })
-        .attr("height", y.bandwidth())
-        .on("click", display)
-        .on("mouseover", function(d,i) {
-           d3.select(this)
-             .attr("fill", "red");
-       })
-       .on("mouseout", function(d, i) {
-         d3.select(this)
-           .attr("fill", "blue");
-       });
+			bar_bat.selectAll(".bar")
+				.data(data)
+				.enter().append("rect")
+				.attr("fill","#588ebb")
+				.attr("width", function(d) {
+					return x(d.runs);
+				})
+				.attr("y", function(d) {
+					return y(d.player);
+				})
+				.attr("height", y.bandwidth())
+				.on("click", display)
+				.on("mouseover", function(d,i) {
+					 d3.select(this)
+						 .attr("fill", "#198f91");
+						 return tooltip.html("Total Runs: "+d.runs)
+							 .style("visibility", "visible")
+							 .style("top", (event.pageY - 17) + "px").style("left", (event.pageX + 25) + "px");
+			 })
+			 .on("mouseout", function(d, i) {
+				 d3.select(this)
+					 .attr("fill", "#588ebb");
+						return tooltip.style("visibility", "hidden");
+			 });
 
       function display(d) {
         console.log(d);
@@ -130,7 +130,7 @@
 
           color = d3.scaleOrdinal()
             .domain(["0","1","2","3","4","5","6"])
-            .range(["#FFA8A8","#99E0FF","#D7D1F8","#FF97CB","#A8CFFF","#f0e68c","#f0e68c"]);
+            .range(["#ffe0e5","#c9e9fd","#D7D1F8","#c0e6eb","#A8CFFF","#ffffbf","#ffffbf"]);
           ;
 
         var donut_bat = d3.select("#bat-donut")

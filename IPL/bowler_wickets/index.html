@@ -1,11 +1,5 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
-<style>
-  .bar {
-    fill: steelblue;
-  }
-</style>
-
 <body>
   <script src="//d3js.org/d3.v4.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -29,7 +23,7 @@
           top: 20,
           right: 20,
           bottom: 30,
-          left: 80
+          left: 90
         },
         width = 960 - margin.left - margin.right,
         height = 500 - margin.top - margin.bottom;
@@ -63,26 +57,30 @@
         return d.bowler;
       }));
 
-      bar_bowl.selectAll(".bar")
-        .data(data)
-        .enter().append("rect")
-        .attr("class", "bar")
-        .attr("width", function(d) {
-          return x(d.total);
-        })
-        .attr("y", function(d) {
-          return y(d.bowler);
-        })
-        .attr("height", y.bandwidth())
-        .on("click", display)
-        .on("mouseover", function(d,i) {
-           d3.select(this)
-             .attr("fill", "red");
-       })
-       .on("mouseout", function(d, i) {
-         d3.select(this)
-           .attr("fill", "blue");
-       });
+			bar_bowl.selectAll(".bar")
+				.data(data)
+				.enter().append("rect")
+				.attr("fill","#198f91")
+				.attr("width", function(d) {
+					return x(d.total);
+				})
+				.attr("y", function(d) {
+					return y(d.bowler);
+				})
+				.attr("height", y.bandwidth())
+				.on("click", display)
+				.on("mouseover", function(d,i) {
+					 d3.select(this)
+						 .attr("fill", "#588ebb");
+					 return tooltip.html("Total Wickets: "+d.total)
+		  			 .style("visibility", "visible")
+		  			 .style("top", (event.pageY - 17) + "px").style("left", (event.pageX + 25) + "px");
+			 })
+			 .on("mouseout", function(d, i) {
+				 d3.select(this)
+					 .attr("fill", "#198f91");
+				return tooltip.style("visibility", "hidden");
+			 });
 
       function display(d) {
         console.log(d);
@@ -123,7 +121,7 @@
 
           color = d3.scaleOrdinal()
             .domain(["0","1","2","3","4","5","6"])
-            .range(["#FFA8A8","#99E0FF","#D7D1F8","#FF97CB","#A8CFFF","#f0e68c","#f0e68c"]);
+            .range(["#ffe0e5","#c9e9fd","#D7D1F8","#c0e6eb","#A8CFFF","#ffffbf","#ffffbf"]);
 
         console.log("Player is "+ player);
         var donut_bowl = d3.select("#bowl-donut")
