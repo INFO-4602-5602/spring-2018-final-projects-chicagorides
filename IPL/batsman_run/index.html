@@ -115,10 +115,10 @@
         // console.log(data_run[0]["runs"]);
         // d3.select("#donut").datum(data_run).call(donut);
         $("#bat-donut").empty();
-        dsDonutChart(data_run,d.player);
+        dsDonutChart(data_run,d.player,d.runs);
       }
 
-      function dsDonutChart(donutChartData,player) {
+      function dsDonutChart(donutChartData,player,totalRuns) {
 
         var width = 400,
           height = 400,
@@ -257,7 +257,7 @@
           .attr("text-anchor", "middle")
           .attr("font-weight", "bold")
           .style("font-size", "16px")
-          .text("run distribution")
+          .text(totalRuns+" runs")
           .attr("class", "title");
 
         function mouseover() {
