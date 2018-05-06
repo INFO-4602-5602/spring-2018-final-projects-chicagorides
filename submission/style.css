@@ -1,0 +1,91 @@
+/*Styling for the lines connecting the labels to the slices*/
+polyline{
+    opacity: .3;
+    stroke: black;
+    stroke-width: 2px;
+    fill: none;
+    shape-rendering: geometricPrecision;
+}
+
+/* styling for the donut slices*/
+path {
+    shape-rendering: geometricPrecision;
+}
+
+/* Make the percentage on the text labels bold*/
+.labelName tspan {
+    font-style: normal;
+    font-weight: 700;
+}
+
+/* In biology we generally italicise species names. */
+.labelName {
+    font-size: 0.8em;
+    font-style: italic;
+}
+
+
+.tooltip1 {
+  position: absolute !important;
+  height: auto !important;
+  width: auto !important;
+  padding: 15px !important;
+  background: #36384C !important;
+  color: white !important;
+  /* font-family: Monospace, Serif; */
+}
+
+.tooltip1:after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  right: 100%;
+  /* To the left of the tooltip */
+  margin-top: -10px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent #36384C transparent transparent;
+}
+
+
+.plot-bg {
+  fill: white;
+}
+
+circle {
+  fill: #ff6600;
+}
+
+.bat-side1{
+		width: 64%;
+		float: left;
+}
+
+.bat-side2{
+		margin-top:25px;
+		width: 22%;
+		float: left;
+}
+
+.bat-side3{
+	margin-top:65px;
+	width:14%;
+	float:left;
+}
+
+.bowl-side1{
+		width: 64%;
+		float: left;
+}
+
+.bowl-side2{
+		margin-top:25px;
+		width: 22%;
+		float: left;
+}
+
+.bowl-side3{
+	margin-top:95px;
+	width:14%;
+	float:left;
+}
