@@ -37,6 +37,7 @@ var chord = viz.chord()
 	.chordOpacity(0.5)
 	.outerRadius(280)
 	.innerRadius(265)
+	.labelPadding(1.08)
 	.fill(function(d){ return team_colors[d]})
 
 d3.select("g").call(chord);

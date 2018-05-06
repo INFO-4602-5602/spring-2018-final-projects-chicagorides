@@ -1,3 +1,13 @@
+* {
+		font-family:Georgia;
+}
+
+.header {
+	padding:2%;
+	background-color: steelblue;
+	font-size: 42px;
+	text-align: center;
+}
 /*Styling for the lines connecting the labels to the slices*/
 polyline{
     opacity: .3;
@@ -49,6 +59,12 @@ polyline{
   border-color: transparent #36384C transparent transparent;
 }
 
+.info {
+	padding:6%;
+	font-family:Georgia;
+	font-size:19;
+	text-align:justify;
+}
 
 .plot-bg {
   fill: white;
@@ -61,59 +77,41 @@ polyline{
 
 .chord-teams-text{
 	margin-top:50px;
-	width:30%;
+	width:25%;
 	float:left;
+	border-style: solid;
+	border-color: black;
 }
 .bat-side1{
-		width: 70%;
-		float: left;
-}
-
-.bat-text-side1{
-		width: 30%;
-		float: left;
-}
-
-.bat-text-side2{
-		width: 55%;
+		width: 64%;
 		float: left;
 }
 .bat-side2{
 		margin-top:25px;
-		width: 25%;
+		width: 22%;
 		float: left;
 }
 
 .bat-side3{
 	margin-top:65px;
-	width:20%;
+	width:14%;
 	float:left;
 }
 
 .bowl-side1{
-		width: 70%;
-		float: left;
-}
-
-.bowl-text-side1{
-		width: 30%;
-		float: left;
-}
-
-.bowl-text-side2{
-		width: 55%;
+		width: 64%;
 		float: left;
 }
 
 .bowl-side2{
 		margin-top:25px;
-		width: 25%;
+		width: 22%;
 		float: left;
 }
 
 .bowl-side3{
 	margin-top:95px;
-	width:20%;
+	width:14%;
 	float:left;
 }
 
@@ -143,11 +141,11 @@ polyline{
 	color: white !important;
 }
 #viz1{
-  height: 720px;
+  height: 750px;
 }
 #viz2{
   height: 1400px;
 }
 #viz3{
-  height: 1050px;
+  height: 620px;
 }

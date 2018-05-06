@@ -7,10 +7,13 @@
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 	<script src="http://vizjs.org/viz.v1.3.0.min.js"></script>
   <link rel="stylesheet" href="style.css" />
+	<h1 class="header">CricViz: Analysis of Indian Premier League data</h1>
 	<div id="viz1">
-		<div id="chord" class="chord-teams"></div>
+		<div id="chord" class="chord-teams"><h2 style="text-align:center;">Distribution of 4s by all teams across overs</h2></div>
 		<div id="chord-text" class="chord-teams-text">
-		<h2>IPL team matches</h2></div>
+		<h2 style="padding-left:6%;">Overview</h2>
+		<p class="info">Indian Premier League(IPL) is a league of teams owned by celebrities and business tycoons in India. This league convenes once every year to play a season for the span of 3 months. The interesting part about this is that we have cricket players from all over the world shuffled into different league teams. There are 9 teams in the league. They are all paired to play against each other and the best four teams go into the playoffs to win the IPL trophy.<br /><br />
+		This league has been around for 10 years and every year and each year there are a total of 70 matches played. We are interested in analyzing this data associated to learn how the teams and the players perform. We visualized the number of games played by each team against other teams, the trend of fours and sixes over the 20 overs, and which batsman and bowler performed the best.</p></div>
 		<script src="chord.js"></script>
 	</div>
   <div id="viz2">
@@ -18,17 +21,14 @@
       <div id = "scores-legend"></div>
     </div>
     <div style="display:inline">
-			<div><h3 style="text-align:center;">Distribution of 4s by all teams across overs</h3></div>
+			<div><h2 style="text-align:center;">Distribution of 4s by all teams across overs</h2></div>
       <div id = "foursperover"></div>
-			<div><h3 style="text-align:center;">Distribution of 6s by all teams across overs</h3></div>
+			<div><h2 style="text-align:center;">Distribution of 6s by all teams across overs</h2></div>
       <div id = "sixesperover"></div>
     </div>
 	<div id="viz3">
 		<div><h2 style="text-align:center;">Performance of the top 30 Batsman across seasons</h2></div>
 		<div id="bat-bar" class="bat-side1"></div>
-		<div id="bat-text1" class="bat-text-side1"></div>
-		<div id="bat-text2" class="bat-text-side2">
-		<p>Indian Premiere League Batsman performance</p></div>
 	  <div id="bat-donut" class="bat-side2"></div>
 	  <div id="bat-legend" class="bat-side3"></div>
 		<script src="batsman.js"></script>
@@ -36,9 +36,6 @@
 	<div id="viz4">
 		<div><h2 style="text-align:center;">Performance of the top 30 Bowlers across seasons</h2></div>
 		<div id="bowl-bar" class="bowl-side1"></div>
-		<div id="bowl-text1" class="bowl-text-side1"></div>
-		<div id="bowl-text2" class="bowl-text-side2">
-		<p>Indian Premiere League Bowlers  performance</p></div>
 	  <div id="bowl-donut" class="bowl-side2"></div>
 	  <div id="bowl-legend" class="bowl-side3"></div>
 		<script src="bowlers.js"></script>
