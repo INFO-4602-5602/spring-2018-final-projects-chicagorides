@@ -8,8 +8,10 @@ polyline{
 }
 
 /* styling for the donut slices*/
-path {
+.arc path {
     shape-rendering: geometricPrecision;
+  stroke: #fff;
+}
 }
 
 /* Make the percentage on the text labels bold*/
@@ -53,10 +55,19 @@ path {
 }
 
 .bat-side1{
-		width: 64%;
+		width: 60%;
 		float: left;
 }
 
+.bat-text-side1{
+		width: 40%;
+		float: left;
+}
+
+.bat-text-side2{
+		width: 64%;
+		float: left;
+}
 .bat-side2{
 		margin-top:25px;
 		width: 22%;
@@ -70,6 +81,16 @@ path {
 }
 
 .bowl-side1{
+		width: 60%;
+		float: left;
+}
+
+.bowl-text-side1{
+		width: 40%;
+		float: left;
+}
+
+.bowl-text-side2{
 		width: 64%;
 		float: left;
 }
@@ -105,13 +126,7 @@ path {
 
 #viz1{
   height: 900px;
-  width:1400px;
 }
 #viz2{
   height: 1400px;
-  width:1400px;
-}
-#viz3{
-  height: 1400px;
-  width:1400px;
 }

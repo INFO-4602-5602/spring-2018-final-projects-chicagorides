@@ -51,7 +51,7 @@ d3.csv('data/batsmanruns.csv', function(error, data) {
 	bar_bat.selectAll(".bar")
 		.data(data)
 		.enter().append("rect")
-		.attr("class", "bar")
+		.attr("fill","#588ebb")
 		.attr("width", function(d) {
 			return x(d.runs);
 		})
@@ -62,11 +62,15 @@ d3.csv('data/batsmanruns.csv', function(error, data) {
 		.on("click", display)
 		.on("mouseover", function(d,i) {
 			 d3.select(this)
-				 .attr("fill", "red");
+				 .attr("fill", "#198f91");
+				 return tooltip.html("Total Runs: "+d.runs)
+					 .style("visibility", "visible")
+					 .style("top", (event.pageY - 17) + "px").style("left", (event.pageX + 25) + "px");
 	 })
 	 .on("mouseout", function(d, i) {
 		 d3.select(this)
-			 .attr("fill", "blue");
+			 .attr("fill", "#588ebb");
+			 	return tooltip.style("visibility", "hidden");
 	 });
 
 	function display(d) {
@@ -99,10 +103,10 @@ d3.csv('data/batsmanruns.csv', function(error, data) {
 		// console.log(data_run[0]["runs"]);
 		// d3.select("#donut").datum(data_run).call(donut);
 		$("#bat-donut").empty();
-		dsDonutChart(data_run,d.player);
+		dsDonutChart(data_run,d.player,d.runs);
 	}
 
-	function dsDonutChart(donutChartData,player) {
+	function dsDonutChart(donutChartData,player,totalRuns) {
 
 		var width = 400,
 			height = 400,
@@ -114,7 +118,7 @@ d3.csv('data/batsmanruns.csv', function(error, data) {
 
 			color = d3.scaleOrdinal()
 				.domain(["0","1","2","3","4","5","6"])
-				.range(["#FFA8A8","#99E0FF","#D7D1F8","#FF97CB","#A8CFFF","#f0e68c","#f0e68c"]);
+				.range(["#ffe0e5","#c9e9fd","#D7D1F8","#c0e6eb","#A8CFFF","#ffffbf","#ffffbf"]);
 			;
 
 		var donut_bat = d3.select("#bat-donut")
@@ -241,7 +245,7 @@ d3.csv('data/batsmanruns.csv', function(error, data) {
 			.attr("text-anchor", "middle")
 			.attr("font-weight", "bold")
 			.style("font-size", "16px")
-			.text("run distribution")
+			.text(totalRuns+" runs")
 			.attr("class", "title");
 
 		function mouseover() {

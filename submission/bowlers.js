@@ -49,7 +49,7 @@ d3.csv('data/bowlers.csv', function(error, data) {
 	bar_bowl.selectAll(".bar")
 		.data(data)
 		.enter().append("rect")
-		.attr("fill","red")
+		.attr("fill","#198f91")
 		.attr("width", function(d) {
 			return x(d.total);
 		})
@@ -60,12 +60,17 @@ d3.csv('data/bowlers.csv', function(error, data) {
 		.on("click", display)
 		.on("mouseover", function(d,i) {
 			 d3.select(this)
-				 .attr("fill", "red");
+				 .attr("fill", "#588ebb");
+			 return tooltip.html("Total Wickets: "+d.total)
+  			 .style("visibility", "visible")
+  			 .style("top", (event.pageY - 17) + "px").style("left", (event.pageX + 25) + "px");
 	 })
 	 .on("mouseout", function(d, i) {
 		 d3.select(this)
-			 .attr("fill", "blue");
+			 .attr("fill", "#198f91");
+		return tooltip.style("visibility", "hidden");
 	 });
+
 
 	function display(d) {
 		console.log(d);
@@ -105,8 +110,8 @@ d3.csv('data/bowlers.csv', function(error, data) {
 			innerRadiusFinal3 = outerRadius * .45,
 
 			color = d3.scaleOrdinal()
-				.domain(["0","1","2","3","4","5","6"])
-				.range(["#FFA8A8","#99E0FF","#D7D1F8","#FF97CB","#A8CFFF","#f0e68c","#f0e68c"]);
+			.domain(["0","1","2","3","4","5","6"])
+			.range(["#ffe0e5","#c9e9fd","#D7D1F8","#c0e6eb","#A8CFFF","#ffffbf","#ffffbf"]);
 
 		console.log("Player is "+ player);
 		var donut_bowl = d3.select("#bowl-donut")
