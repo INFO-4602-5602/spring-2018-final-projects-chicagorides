@@ -1,6 +1,6 @@
 var margin = {top: 20, right: 20, bottom: 30, left: 50};
 var width = 1500 - margin.left - margin.right;
-var height = 1500 - margin.top - margin.bottom;
+var height = 800 - margin.top - margin.bottom;
 
 var team_data = [];
 

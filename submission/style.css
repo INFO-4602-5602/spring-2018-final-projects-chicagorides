@@ -52,10 +52,6 @@ path {
   fill: white;
 }
 
-circle {
-  fill: #ff6600;
-}
-
 .bat-side1{
 		width: 64%;
 		float: left;
@@ -88,4 +84,34 @@ circle {
 	margin-top:95px;
 	width:14%;
 	float:left;
+}
+
+/*for scores*/
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.axis text {
+  font: 10px sans-serif;
+}
+
+.cells path {
+  fill: none;
+  pointer-events: all;
+}
+
+#viz1{
+  height: 900px;
+  width:1400px;
+}
+#viz2{
+  height: 1400px;
+  width:1400px;
+}
+#viz3{
+  height: 1400px;
+  width:1400px;
 }
