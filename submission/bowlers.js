@@ -14,7 +14,7 @@ d3.csv('data/bowlers.csv', function(error, data) {
 			bottom: 30,
 			left: 110
 		},
-		width = 960 - margin.left - margin.right,
+		width = 880 - margin.left - margin.right,
 		height = 500 - margin.top - margin.bottom;
 
 	// set the ranges
