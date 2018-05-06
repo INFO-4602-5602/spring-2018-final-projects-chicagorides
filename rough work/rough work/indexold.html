@@ -1,0 +1,54 @@
+<html>
+    <head>
+    <title>Chicago Rides</title>
+    <script src = "sample.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    </head>
+  <body>
+    <div class="mainLeft" style="display:inline-block; float:left; width:68%">
+      <div class = "left" style="height:90%;">
+        <div id="mapDisplay" style="display:inline-block; float:left; width:85%">
+          <p>Map will come here</p>
+        </div>
+        <div id="dateTime" style="display:inline-block;width:15%;height:15%;background:black;color:white;">
+          <p>Display Date here</p>
+        </div>
+      </div>
+      <div style="height:10%">
+        <p>Please select a month</p>
+        <!-- http://jsfiddle.net/schinckel/BLkmc/3/?utm_source=website&utm_medium=embed&utm_campaign=BLkmc -->
+        <nav class="segmented-button">
+          <input type="radio" name="seg-1" value="January" id="seg-Jan" checked onclick="javascript:populateData(this.value)">
+          <label for="seg-Jan" class="first">January</label>
+          <input type="radio" name="seg-1" value="February" id="seg-Feb" onclick="javascript:populateData(this.value)">
+          <label for="seg-Feb">February</label>
+          <input type="radio" name="seg-1" value="March" id="seg-Mar" onclick="javascript:populateData(this.value)">
+          <label for="seg-Mar">March</label>
+          <input type="radio" name="seg-1" value="April" id="seg-Apr" onclick="javascript:populateData(this.value)">
+          <label for="seg-Apr" class="last">April</label>
+          <input type="radio" name="seg-1" value="May" id="seg-May" onclick="javascript:populateData(this.value)">
+          <label for="seg-May" class="last">May</label>
+          <input type="radio" name="seg-1" value="June" id="seg-Jun" onclick="javascript:populateData(this.value)">
+          <label for="seg-Jun" class="last">June</label>
+          <input type="radio" name="seg-1" value="July" id="seg-Jul" onclick="javascript:populateData(this.value)">
+          <label for="seg-Jul" class="last">July</label>
+          <input type="radio" name="seg-1" value="August" id="seg-Aug" onclick="javascript:populateData(this.value)">
+          <label for="seg-Aug" class="last">August</label>
+          <input type="radio" name="seg-1" value="September" id="seg-Sep" onclick="javascript:populateData(this.value)">
+          <label for="seg-Sep" class="last">September</label>
+          <input type="radio" name="seg-1" value="October" id="seg-Oct" onclick="javascript:populateData(this.value)">
+          <label for="seg-Oct" class="last">October</label>
+          <input type="radio" name="seg-1" value="November" id="seg-Nov" onclick="javascript:populateData(this.value)">
+          <label for="seg-Nov" class="last">November</label>
+          <input type="radio" name="seg-1" value="December" id="seg-Dec" onclick="javascript:populateData(this.value)">
+          <label for="seg-Dec" class="last">December</label>
+        </nav>
+      </div>
+    </div>
+    <div class="mainRight" style="display:inline-block; width:30%">
+      <div class="right" style="height:33%;"><p>Revenue generated</p></div>
+      <div class="right" style="height:33%;"><p>Average trip speed?</p></div>
+      <div class="right" style="height:33%"><p>Trip details</p></div>
+    </div>
+  </body>
+</html>

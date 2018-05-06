@@ -1,0 +1,281 @@
+batting_team,over,fours
+Chennai Super Kings,1,85
+Chennai Super Kings,2,129
+Chennai Super Kings,3,106
+Chennai Super Kings,4,126
+Chennai Super Kings,5,142
+Chennai Super Kings,6,135
+Chennai Super Kings,7,65
+Chennai Super Kings,8,76
+Chennai Super Kings,9,89
+Chennai Super Kings,10,61
+Chennai Super Kings,11,67
+Chennai Super Kings,12,69
+Chennai Super Kings,13,63
+Chennai Super Kings,14,76
+Chennai Super Kings,15,80
+Chennai Super Kings,16,69
+Chennai Super Kings,17,98
+Chennai Super Kings,18,84
+Chennai Super Kings,19,93
+Chennai Super Kings,20,79
+Deccan Chargers,1,72
+Deccan Chargers,2,74
+Deccan Chargers,3,73
+Deccan Chargers,4,62
+Deccan Chargers,5,56
+Deccan Chargers,6,65
+Deccan Chargers,7,39
+Deccan Chargers,8,42
+Deccan Chargers,9,26
+Deccan Chargers,10,33
+Deccan Chargers,11,48
+Deccan Chargers,12,45
+Deccan Chargers,13,28
+Deccan Chargers,14,36
+Deccan Chargers,15,49
+Deccan Chargers,16,42
+Deccan Chargers,17,49
+Deccan Chargers,18,42
+Deccan Chargers,19,46
+Deccan Chargers,20,39
+Delhi Daredevils,1,116
+Delhi Daredevils,2,160
+Delhi Daredevils,3,143
+Delhi Daredevils,4,140
+Delhi Daredevils,5,153
+Delhi Daredevils,6,129
+Delhi Daredevils,7,89
+Delhi Daredevils,8,67
+Delhi Daredevils,9,85
+Delhi Daredevils,10,87
+Delhi Daredevils,11,76
+Delhi Daredevils,12,75
+Delhi Daredevils,13,88
+Delhi Daredevils,14,79
+Delhi Daredevils,15,68
+Delhi Daredevils,16,78
+Delhi Daredevils,17,93
+Delhi Daredevils,18,110
+Delhi Daredevils,19,77
+Delhi Daredevils,20,78
+Gujarat Lions,1,31
+Gujarat Lions,2,26
+Gujarat Lions,3,32
+Gujarat Lions,4,34
+Gujarat Lions,5,29
+Gujarat Lions,6,33
+Gujarat Lions,7,18
+Gujarat Lions,8,26
+Gujarat Lions,9,17
+Gujarat Lions,10,17
+Gujarat Lions,11,22
+Gujarat Lions,12,14
+Gujarat Lions,13,18
+Gujarat Lions,14,23
+Gujarat Lions,15,16
+Gujarat Lions,16,21
+Gujarat Lions,17,25
+Gujarat Lions,18,21
+Gujarat Lions,19,22
+Gujarat Lions,20,15
+Kings XI Punjab,1,114
+Kings XI Punjab,2,143
+Kings XI Punjab,3,144
+Kings XI Punjab,4,152
+Kings XI Punjab,5,156
+Kings XI Punjab,6,167
+Kings XI Punjab,7,79
+Kings XI Punjab,8,93
+Kings XI Punjab,9,81
+Kings XI Punjab,10,85
+Kings XI Punjab,11,89
+Kings XI Punjab,12,88
+Kings XI Punjab,13,75
+Kings XI Punjab,14,98
+Kings XI Punjab,15,96
+Kings XI Punjab,16,88
+Kings XI Punjab,17,101
+Kings XI Punjab,18,88
+Kings XI Punjab,19,95
+Kings XI Punjab,20,87
+Kochi Tuskers Kerala,1,13
+Kochi Tuskers Kerala,2,9
+Kochi Tuskers Kerala,3,14
+Kochi Tuskers Kerala,4,19
+Kochi Tuskers Kerala,5,11
+Kochi Tuskers Kerala,6,21
+Kochi Tuskers Kerala,7,8
+Kochi Tuskers Kerala,8,4
+Kochi Tuskers Kerala,9,7
+Kochi Tuskers Kerala,10,3
+Kochi Tuskers Kerala,11,6
+Kochi Tuskers Kerala,12,8
+Kochi Tuskers Kerala,13,11
+Kochi Tuskers Kerala,14,4
+Kochi Tuskers Kerala,15,8
+Kochi Tuskers Kerala,16,5
+Kochi Tuskers Kerala,17,5
+Kochi Tuskers Kerala,18,5
+Kochi Tuskers Kerala,19,6
+Kochi Tuskers Kerala,20,5
+Kolkata Knight Riders,1,133
+Kolkata Knight Riders,2,155
+Kolkata Knight Riders,3,149
+Kolkata Knight Riders,4,148
+Kolkata Knight Riders,5,151
+Kolkata Knight Riders,6,127
+Kolkata Knight Riders,7,74
+Kolkata Knight Riders,8,59
+Kolkata Knight Riders,9,72
+Kolkata Knight Riders,10,81
+Kolkata Knight Riders,11,83
+Kolkata Knight Riders,12,79
+Kolkata Knight Riders,13,88
+Kolkata Knight Riders,14,85
+Kolkata Knight Riders,15,96
+Kolkata Knight Riders,16,87
+Kolkata Knight Riders,17,94
+Kolkata Knight Riders,18,94
+Kolkata Knight Riders,19,78
+Kolkata Knight Riders,20,81
+Mumbai Indians,1,110
+Mumbai Indians,2,137
+Mumbai Indians,3,147
+Mumbai Indians,4,159
+Mumbai Indians,5,149
+Mumbai Indians,6,156
+Mumbai Indians,7,78
+Mumbai Indians,8,76
+Mumbai Indians,9,83
+Mumbai Indians,10,78
+Mumbai Indians,11,83
+Mumbai Indians,12,96
+Mumbai Indians,13,85
+Mumbai Indians,14,92
+Mumbai Indians,15,113
+Mumbai Indians,16,103
+Mumbai Indians,17,118
+Mumbai Indians,18,96
+Mumbai Indians,19,114
+Mumbai Indians,20,98
+Pune Warriors,1,31
+Pune Warriors,2,36
+Pune Warriors,3,50
+Pune Warriors,4,40
+Pune Warriors,5,36
+Pune Warriors,6,42
+Pune Warriors,7,16
+Pune Warriors,8,24
+Pune Warriors,9,20
+Pune Warriors,10,21
+Pune Warriors,11,21
+Pune Warriors,12,30
+Pune Warriors,13,19
+Pune Warriors,14,15
+Pune Warriors,15,22
+Pune Warriors,16,18
+Pune Warriors,17,18
+Pune Warriors,18,26
+Pune Warriors,19,17
+Pune Warriors,20,24
+Rajasthan Royals,1,95
+Rajasthan Royals,2,105
+Rajasthan Royals,3,123
+Rajasthan Royals,4,127
+Rajasthan Royals,5,108
+Rajasthan Royals,6,127
+Rajasthan Royals,7,60
+Rajasthan Royals,8,60
+Rajasthan Royals,9,72
+Rajasthan Royals,10,73
+Rajasthan Royals,11,67
+Rajasthan Royals,12,69
+Rajasthan Royals,13,54
+Rajasthan Royals,14,75
+Rajasthan Royals,15,83
+Rajasthan Royals,16,66
+Rajasthan Royals,17,84
+Rajasthan Royals,18,77
+Rajasthan Royals,19,57
+Rajasthan Royals,20,69
+Rising Pune Supergiant,1,10
+Rising Pune Supergiant,2,13
+Rising Pune Supergiant,3,20
+Rising Pune Supergiant,4,14
+Rising Pune Supergiant,5,15
+Rising Pune Supergiant,6,18
+Rising Pune Supergiant,7,3
+Rising Pune Supergiant,8,8
+Rising Pune Supergiant,9,5
+Rising Pune Supergiant,10,6
+Rising Pune Supergiant,11,6
+Rising Pune Supergiant,12,14
+Rising Pune Supergiant,13,6
+Rising Pune Supergiant,14,10
+Rising Pune Supergiant,15,6
+Rising Pune Supergiant,16,9
+Rising Pune Supergiant,17,10
+Rising Pune Supergiant,18,6
+Rising Pune Supergiant,19,10
+Rising Pune Supergiant,20,11
+Rising Pune Supergiants,1,11
+Rising Pune Supergiants,2,13
+Rising Pune Supergiants,3,16
+Rising Pune Supergiants,4,17
+Rising Pune Supergiants,5,9
+Rising Pune Supergiants,6,19
+Rising Pune Supergiants,7,7
+Rising Pune Supergiants,8,9
+Rising Pune Supergiants,9,10
+Rising Pune Supergiants,10,4
+Rising Pune Supergiants,11,7
+Rising Pune Supergiants,12,6
+Rising Pune Supergiants,13,9
+Rising Pune Supergiants,14,2
+Rising Pune Supergiants,15,3
+Rising Pune Supergiants,16,3
+Rising Pune Supergiants,17,8
+Rising Pune Supergiants,18,7
+Rising Pune Supergiants,19,5
+Rising Pune Supergiants,20,8
+Royal Challengers Bangalore,1,108
+Royal Challengers Bangalore,2,125
+Royal Challengers Bangalore,3,150
+Royal Challengers Bangalore,4,142
+Royal Challengers Bangalore,5,137
+Royal Challengers Bangalore,6,139
+Royal Challengers Bangalore,7,67
+Royal Challengers Bangalore,8,84
+Royal Challengers Bangalore,9,83
+Royal Challengers Bangalore,10,75
+Royal Challengers Bangalore,11,86
+Royal Challengers Bangalore,12,69
+Royal Challengers Bangalore,13,70
+Royal Challengers Bangalore,14,93
+Royal Challengers Bangalore,15,92
+Royal Challengers Bangalore,16,89
+Royal Challengers Bangalore,17,99
+Royal Challengers Bangalore,18,110
+Royal Challengers Bangalore,19,104
+Royal Challengers Bangalore,20,85
+Sunrisers Hyderabad,1,63
+Sunrisers Hyderabad,2,66
+Sunrisers Hyderabad,3,64
+Sunrisers Hyderabad,4,80
+Sunrisers Hyderabad,5,83
+Sunrisers Hyderabad,6,84
+Sunrisers Hyderabad,7,36
+Sunrisers Hyderabad,8,25
+Sunrisers Hyderabad,9,39
+Sunrisers Hyderabad,10,43
+Sunrisers Hyderabad,11,33
+Sunrisers Hyderabad,12,44
+Sunrisers Hyderabad,13,31
+Sunrisers Hyderabad,14,42
+Sunrisers Hyderabad,15,49
+Sunrisers Hyderabad,16,45
+Sunrisers Hyderabad,17,43
+Sunrisers Hyderabad,18,42
+Sunrisers Hyderabad,19,52
+Sunrisers Hyderabad,20,44

@@ -1,0 +1,42 @@
+<html>
+<style>
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.axis text {
+  font: 10px sans-serif;
+}
+
+.cells path {
+  fill: none;
+  pointer-events: all;
+}
+
+.cells :hover circle {
+  fill: red;
+}
+#scores-legend {
+    display: inline;
+}
+
+</style>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<body>
+  <div>
+    <div style="display:inline; float:left;">
+      <div id = "scores-legend"></div>
+    </div>
+    <div style="display:inline">
+      <div id = "foursperover"></div>
+      <div id = "sixesperover"></div>
+    </div>
+</div>
+  <script src="viz3.js"></script>
+</body>
+
+</html>
