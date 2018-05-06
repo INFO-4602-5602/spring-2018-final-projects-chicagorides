@@ -63,15 +63,13 @@ d3.csv('data/batsmanruns.csv', function(error, data) {
 		.on("mouseover", function(d,i) {
 			 d3.select(this)
 				 .attr("fill", "#198f91");
-				 return tooltip.html("Total Runs: "+d.runs)
-					 .style("visibility", "visible")
-					 .style("top", (event.pageY - 17) + "px").style("left", (event.pageX + 25) + "px");
 	 })
 	 .on("mouseout", function(d, i) {
 		 d3.select(this)
 			 .attr("fill", "#588ebb");
-			 	return tooltip.style("visibility", "hidden");
-	 });
+	 })
+	 .append("title")
+	 .text(function(d) { return "Total Runs: "+d.runs });
 
 	function display(d) {
 		console.log(d);
@@ -196,14 +194,16 @@ display(data[0]);
 				return color(i);
 			})
 			.attr("d", arc)
-			.on("mouseover", function(d) {
-				return tooltip.html(d.data.run_type + " : " + formatAsPercentage((d.data.runs).toFixed(3)))
-					.style("visibility", "visible")
-					.style("top", (event.pageY - 17) + "px").style("left", (event.pageX + 25) + "px");
-			})
-			.on("mouseout", function() {
-				return tooltip.style("visibility", "hidden");
-			})
+			// .on("mouseover", function(d) {
+			// 	return tooltip.html(d.data.run_type + " : " + formatAsPercentage((d.data.runs).toFixed(3)))
+			// 		.style("visibility", "visible")
+			// 		.style("top", (event.pageY - 17) + "px").style("left", (event.pageX + 25) + "px");
+			// })
+			// .on("mouseout", function() {
+			// 	return tooltip.style("visibility", "hidden");
+			// })
+			.append("title")
+	 	 .text(function(d) { return d.data.run_type + " : " + formatAsPercentage((d.data.runs).toFixed(3)) });
 
 		d3.selectAll("g.slice").selectAll("path").transition()
 			.duration(750)
